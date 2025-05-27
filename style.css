@@ -1,0 +1,121 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #1a1a1a;
+  --accent: #4ecca3;
+  --dark-bg: #1f1f1f;
+  --dark-text: #f1f1f1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  horiz-align: center;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  horiz-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.toggle-theme {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.project-cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #fff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #eee;
+}
+
+.section{
+  p{
+    font-size: 1.2rem;
+  }
+}
+
+/* Dark theme */
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark .navbar {
+  background: #333;
+}
+
+body.dark .card {
+  background: #2a2a2a;
+  color: #f1f1f1;
+}
