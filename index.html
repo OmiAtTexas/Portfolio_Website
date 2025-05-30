@@ -4,130 +4,454 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assests/profile.png">
-  <title>Om More</title>
+  <title>Om More - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
   <header>
     <nav class="navbar">
-      <div class="logo">MyPortfolio</div>
+      <div class="logo">
+        <span class="logo-text">Om</span>
+        <span class="logo-accent">More</span>
+      </div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="assests/resume.pdf">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="assests/resume.pdf" class="nav-link" target="_blank">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <div class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </div>
+      <div class="mobile-menu-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
-  <section id="home" class="section">
-    <div class="intro">
-      <h1>Hi, I'm <span class="highlight">Om More</span></h1>
-      <h2 class="typewriter"></h2>
-      <br><br>
-      <img src="assests/profile.png" height="200px" width="200px" />
-      <p>Computer Science Student at Texas Tech University</p>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>Driven Computer Science student with a diverse blend of technical expertise and creative vision. Certified in Google UI/UX Design,
-      Meta Back-End Development, AI/ML, and Business Intelligence. Developed impactful projects ranging from AI chatbots to scalable
-      pharmaceutical research platforms. Proficient in React.js, Python, Tableau, and front-end technologies. Also worked at company
-      “World of Wood” as an design analyst and junior product designer.</p>
-    <br><br>
-    <section id = "skills">
-    <h1>Skills</h1>
-    <p><p> HTML | CSS | JavaScript | Python | React | Tableau | Product Designing | Microsoft 365 | UI/UX Design</p></p>
-  </section>
-
-  <section id="Experience" class="section">
-    <h2>Experience</h2>
-    <div class="project-cards">
-      <div class="card">
-        <h3>Marketing Technology Coordinator (Present) | <a href="https://heartotexasbrokenbow.com/">Vacation Rental Management Company</a> - November 2024</h3>
-        <p>Actively manage marketing for Vacation rental cabin “Heart O’ Texas” located in Broken Bow, Oklahoma. Designed professional materials including Business card, Promotional posters, Digital flyers and Social media templates,
-          ensuring a consistent and polished brand identity across all platforms.</p>
+  <main>
+    <section id="home" class="section hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight gradient-text">Om More</span>
+          </h1>
+          <h2 class="typewriter-container">
+            <span class="typewriter"></span>
+            <span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            Computer Science Student at Texas Tech University
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fas fa-code"></i>
+              View Projects
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img src="assests/profile.png" alt="Om More" class="profile-img" />
+            <div class="image-glow"></div>
+          </div>
+        </div>
       </div>
-
-      <div class="project-cards">
-      <div class="card">
-        <h3>Junior Product Design Analyst | World Of Wood: June 2022 - August 2022</h3>
-        <p>As part of my collaboration with a Senior Product Designer, I played a key role in optimizing product development by conducting in-depth analysis of historical design data. By meticulously examining patterns and inefficiencies in past designs, I identified
-          critical areas where material wastage frequently occurred. Leveraging these insights, I proposed data-driven improvements that were subsequently integrated into upcoming product designs. This proactive approach not only contributed to more sustainable
-          and cost-effective
-          production practices but also supported the company’s broader goals of reducing waste and
-          increasing operational efficiency. Through this experience, I gained valuable exposure to the intersection of design and data analytics, while enhancing my ability to translate complex datasets into actionable strategies that drive tangible outcomes
-          in real-world design processes.</p>
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <p>Scroll Down</p>
       </div>
-
-  </section>
-
-<section id="certifications" class="section">
-    <h2>Certifications</h2>
-    <div class="project-cards">
-      <div class="card">
-        <h3><a href="https://www.coursera.org/account/accomplishments/professional-cert/533HFCEUGNE2" >Google UX Design</a></h3>
-        <p>Understood the basics of UX research, like planning research studies, conducting interviews and usability studies, and synthesizing research results</p>
-      </div>
-
-      <div class="card">
-        <h3>Meta Back-end Developer</h3>
-        <p>Back-end Development through coursera by Meta</p>
-      </div>
-
-      <div class="card">
-        <h3>Amazon Junior Software Developer</h3>
-        <p>On going...</p>
-      </div>
-
     </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="card">
-        <h3><a href="https://devpost.com/software/serenata">Serenata</a> </h3>
-        <p> Built an intelligent music recommendation app designed to refine and personalize song suggestions using user preferences
-          and behavioral insights.</p>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-number">01.</span>
+          About Me
+        </h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+              Driven Computer Science student with a diverse blend of technical expertise and creative vision.
+              Certified in Google UI/UX Design, Meta Back-End Development, AI/ML, and Business Intelligence.
+              Developed impactful projects ranging from AI chatbots to scalable pharmaceutical research platforms.
+            </p>
+            <p class="about-description">
+              Proficient in React.js, Python, Tableau, and front-end technologies. Also worked at company
+              "World of Wood" as a design analyst and junior product designer, bringing both analytical
+              thinking and creative problem-solving to every project.
+            </p>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number" data-target="4">0</div>
+                <div class="stat-label">Projects Completed</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3><a href="https://devpost.com/software/pharmageddon">Pharmageddon</a> </h3>
-        <p>Developed a web- based solution to enhance data integrity, usability, and scalability in pharmaceutical research by enabling secure,
-          centralized management of clinical trial data.</p>
-      </div>
+    <!-- Skills Section -->
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </div>
 
-      <div class="card">
-        <h3><a href="https://youtu.be/tsTCNvwddmc?si=Ck7muSe67AinamA5">Red Wine Quality Classifier</a></h3>
-        <p>DImplemented a machine learning model to classify the quality of red wine based on chemical properties,
-          showcasing data preprocessing, analysis, and classification techniques.</p>
-      </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">OpenCV</span>
+                </div>
+            </div>
 
-     <div class="card">
-        <h3>AI RAG CHAT-BOT (Google Developer Groups)</a></h3>
-        <p> Gained hands- on experience in building a Retrieval-Augmented Generation chatbot with capabilities similar to ChatGPT, i
-          ntegrating LLMs with custom knowledge sources.</p>
-      </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-globe"></i> Web Development</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Bootstrap</span>
+                </div>
+            </div>
 
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                <div class="skill-items">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Jupyter</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Email: opm281706@gmail.com</p>
-    <p>LinkedIn:<a href="https://www.linkedin.com/in/moreom/"> Om More</a></p>
-    <p>Github:<a href="https://github.com/OmiAtTexas"> OmiAtTexas</a></p>
-  </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-number">03.</span>
+          Experience
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">November 2024 - Present</div>
+              <h3>Marketing Technology Coordinator</h3>
+              <h4><a href="https://heartotexasbrokenbow.com/" target="_blank">Vacation Rental Management Company</a></h4>
+              <p>Actively manage marketing for Vacation rental cabin "Heart O' Texas" located in Broken Bow, Oklahoma.
+                 Designed professional materials including Business cards, Promotional posters, Digital flyers and
+                 Social media templates, ensuring a consistent and polished brand identity across all platforms.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Marketing</span>
+                <span class="tech-tag">Design</span>
+                <span class="tech-tag">Brand Identity</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">June 2022 - August 2022</div>
+              <h3>Junior Product Design Analyst</h3>
+              <h4>World Of Wood</h4>
+              <p>Collaborated with Senior Product Designer to optimize product development by conducting in-depth
+                 analysis of historical design data. Identified critical areas where material wastage occurred and
+                 proposed data-driven improvements that were integrated into upcoming product designs.</p>
+              <div class="tech-tags">
+                <span class="tech-tag">Data Analysis</span>
+                <span class="tech-tag">Product Design</span>
+                <span class="tech-tag">Process Optimization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-number">04.</span>
+          Certifications
+        </h2>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fab fa-google"></i>
+            </div>
+            <h3>Google UX Design</h3>
+            <p>Comprehensive understanding of UX research, user interviews, usability studies, and research synthesis.</p>
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/533HFCEUGNE2"
+               target="_blank" class="cert-link">
+              <i class="fas fa-external-link-alt"></i>
+              View Certificate
+            </a>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fab fa-meta"></i>
+            </div>
+            <h3>Meta Back-end Developer</h3>
+            <p>Back-end development fundamentals and advanced concepts through Meta's comprehensive program.</p>
+            <div class="cert-status">Completed</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">
+              <i class="fab fa-aws"></i>
+            </div>
+            <h3>Amazon Junior Software Developer</h3>
+            <p>Currently pursuing Amazon's software development certification program.</p>
+            <div class="cert-status ongoing">In Progress</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-number">05.</span>
+          Featured Projects
+        </h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://devpost.com/software/serenata" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Serenata</h3>
+              <p>Built an intelligent music recommendation app designed to refine and personalize song suggestions
+                 using user preferences and behavioral insights.</p>
+              <div class="project-tech">
+                <span class="tech-tag">AI/ML</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Recommendation System</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://devpost.com/software/pharmageddon" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Pharmageddon</h3>
+              <p>Developed a web-based solution to enhance data integrity, usability, and scalability in
+                 pharmaceutical research by enabling secure, centralized management of clinical trial data.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Web Development</span>
+                <span class="tech-tag">Database</span>
+                <span class="tech-tag">Healthcare</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://youtu.be/tsTCNvwddmc?si=Ck7muSe67AinamA5" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Red Wine Quality Classifier</h3>
+              <p>Implemented a machine learning model to classify the quality of red wine based on chemical
+                 properties, showcasing data preprocessing, analysis, and classification techniques.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Data Science</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <div class="project-link">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>AI RAG CHAT-BOT</h3>
+              <p>Gained hands-on experience in building a Retrieval-Augmented Generation chatbot with capabilities
+                 similar to ChatGPT, integrating LLMs with custom knowledge sources.</p>
+              <div class="project-tech">
+                <span class="tech-tag">AI/ML</span>
+                <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">LLM</span>
+                <span class="tech-tag">RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">
+          <span class="title-number">06.</span>
+          Get In Touch
+        </h2>
+        <div class="contact-content">
+          <div class="contact-text">
+            <h3>Let's work together!</h3>
+            <p>I'm always interested in new opportunities and exciting projects.
+               Whether you have a question or just want to say hi, feel free to reach out!</p>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:opm281706@gmail.com">opm281706@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/moreom/" target="_blank">Om More</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-details">
+                <h4>GitHub</h4>
+                <a href="https://github.com/OmiAtTexas" target="_blank">OmiAtTexas</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer>
-    <p>© Om More</p>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2024 Om More. Built with passion and lots of coffee ☕</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/moreom/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/OmiAtTexas" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:opm281706@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
-  </body>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+<script>
+// Debug script - add before closing </body> tag
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Skills section:', document.getElementById('skills'));
+    console.log('Skills grid:', document.querySelector('.skills-grid'));
+    console.log('Skill categories:', document.querySelectorAll('.skill-category'));
+
+    // Force show skills
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+        skillsSection.style.display = 'block';
+        skillsSection.style.opacity = '1';
+        skillsSection.style.visibility = 'visible';
+        console.log('Skills section made visible');
+    } else {
+        console.log('Skills section not found!');
+    }
+});
+</script>
+
+
+</body>
 </html>
